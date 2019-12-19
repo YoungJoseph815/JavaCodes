@@ -8,9 +8,6 @@ public class middleLetterInString {
 		
 		middleLetter(name);
 		
-		
-		
-		
 	}
 	
 	
@@ -33,9 +30,6 @@ public class middleLetterInString {
 		}
 		
 		
-		
-		
 	}
-
 
 }
