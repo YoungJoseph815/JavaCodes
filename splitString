@@ -1,0 +1,27 @@
+package practice;
+
+public class ss {
+
+	public static void main(String[] args) {
+		
+		
+		String s = "Welcome to Baeldung";
+		
+		
+		splitString(s);
+
+	}
+	
+	public static void splitString(String str) {
+		
+       
+		
+		String[] result = str.split(" ");
+		
+		for(String s:result) {
+			
+			System.out.println(s+" "+s.length());
+		}
+	}
+
+}
