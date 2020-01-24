@@ -1,0 +1,31 @@
+import java.text.NumberFormat;
+import java.text.ParseException;
+
+public class nummm {
+
+	public static void main(String[] args)  {
+		
+		String something="a6bc12ef35";
+		
+		
+		retrieveNum(something);
+	}
+	
+	public static void retrieveNum(String str) {
+		
+
+	    int length = str.length();
+         String result = "";
+      for (int i = 0; i < length; i++) {
+    Character character = str.charAt(i);
+    if (Character.isDigit(character)) {
+        result += character;
+    }
+         }
+         System.out.println(result);
+	
+
+
+	}
+
+}
