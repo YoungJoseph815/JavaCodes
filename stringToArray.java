@@ -6,7 +6,7 @@ public class stringToArray {
 
     public static void main(String[] args) {
 
-        String name="shahrizat";
+        String name="axumutjan";
 
         string2Array(name);
 
