@@ -2,34 +2,24 @@ package practice;
 
 public class binarySearch {
 
-    public static void main(String[] args) {
-
-        int[] arr={0,2,4,6,8,9};
-
-        System.out.println(binarySearch(arr,0,9,8));
-
-
+       public static void main(String[] args) {
+        int[] arr={1,3,5,7,8};
+        System.out.println(binarySearch(arr,1,8,3));
     }
-
-
-    public static int binarySearch(int[] a,int low,int high,int key)
-    {
-        while(low<=high)
-        {
-            int mid=(low+high)/2;
-            if(a[mid]<key)
-            {
-                low=mid+1;
-            }
-            else if(a[mid]>key)
-            {
-                high=mid-1;
-            }
-            else
-            {
-                return mid;
+    public static int binarySearch(int[] a, int beg, int end, int item) {
+        int mid;
+        if (end >= beg) {
+            mid = (beg + end) / 2;
+            if (a[mid] == item) {
+            	return mid;
+            	//return mid + 1;
+            } else if (a[mid] < item) {
+                return binarySearch(a, mid + 1, end, item);
+            } else {
+                return binarySearch(a, beg, mid - 1, item);
             }
         }
-        return -1;                //key not found
+        return -1;
     }
+
 }
