@@ -4,7 +4,7 @@ public class countOfVowels {
 
     public static void main(String[] args) {
 
-        String str="shahrizat";
+        String str="PlanetEartg";
         char[] letter=str.toCharArray();
 
         System.out.println("there is "+vowelCounter(letter)+" vowels in the line");
