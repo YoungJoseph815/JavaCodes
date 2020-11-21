@@ -29,4 +29,35 @@ public class biggestNumInArray {
 
 
     }
+    
+    
+     public static int secondBig(int[] arr){
+
+        int sbig=arr[0];
+
+        for (int i=0; i<arr.length;i++){
+            if (arr[i]>sbig){
+                sbig=arr[i-1];
+            }
+        }
+        return sbig;
+    }
+
+    public static int ssmall(int[] arr){
+
+        int ssmall=arr[1];
+        int small=arr[0];
+
+        for (int i=0; i<arr.length;i++){
+           for (int j=0;j<arr.length;j++){
+               if (arr[i]<small ){
+                   ssmall=arr[i];
+                   if (arr[j]<ssmall){
+                       arr[j]=ssmall;
+                   }
+               }
+           }
+        }
+        return ssmall;
+    }
 }
