@@ -4,7 +4,7 @@ public class fibonacci {
 
 
 
-    static int num1=1, num2=1, num3=0;
+    static int num1=0, num2=1, num3;
 
     public static void main(String[] args) {
 
