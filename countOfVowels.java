@@ -4,78 +4,36 @@ public class countOfVowels {
 
     public static void main(String[] args) {
 
-        String str="PlanetEartg";
-        char[] letter=str.toCharArray();
-
-        System.out.println("there is "+vowelCounter(letter)+" vowels in the line");
-
+      count("Budilaq Odulaq");
 
     }
 
-    public static int vowelCounter(char[] c){
 
-        int count=0;
-        for(char ch:c){
-
-            switch (ch){
-
-                case 'a':
-                    count++;
-                    break;
-                case 'o':
-                    count++;
-                    break;
-                case 'e':
-                    count++;
-                    break;
-                case 'i':
-                    count++;
-                    break;
-                case 'u':
-                    count++;
-                    break;
-
-                default:
-
-            }
-        }
-
-        return count;
-
-
-
-    }
-    
-    
-      @Test
-    public void test(){
-        System.out.println(count("hello"));
-    }
-    public  String count(String word){
+   public static void count(String str){
         int countVowels=0;
-        int countConsonants=0;
+        int countConso=0;
+        str=str.toLowerCase();
 
-        List<Character> vowels= Arrays.asList('a','e','i','o','u');
-        List<Character> consonant= new ArrayList<>();
+        List<Character> vowels=Arrays.asList('a','o','e','i','u');
+        List<Character> conso=new ArrayList<>();
 
-        for(char i='a';i<='z';i++){
-            if(!vowels.contains(i)){
-                consonant.add(i);
+        for (char i='a';i<'z';i++){
+            if (!vowels.contains(i)){
+                conso.add(i);
             }
-            word=word.toLowerCase();
+
         }
 
-        for(int i=0;i<word.length();i++){
-            if(vowels.contains(word.charAt(i))){
+        for(int i=0;i<str.length();i++){
+            if (vowels.contains(str.charAt(i))){
                 countVowels++;
-            }else{
-                countConsonants++;
+            }else {
+                countConso++;
             }
         }
-        
-        String vowelsMsg="number of vowels is: "+countVowels;
-       // String consonantMsg="number of consonant is "+ consonant;
+       System.out.println("number of vowels is: "+countVowels);
+       System.out.println("number of consonant is "+ countConso);
 
-        return vowelsMsg;
     }
+
 }
