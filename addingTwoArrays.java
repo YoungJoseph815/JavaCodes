@@ -1,45 +1,24 @@
 package practice;
 
-import org.testng.annotations.Test;
-
-import java.util.Arrays;
-
 public class addingTwoArrays {
 
-
     public static void main(String[] args) {
-
-        int[] array1 = {2, 3, 4, 5, 3, 4, 2, 34, 2, 56, 98, 32, 54};
-        int[] array2 = {2, 3, 4, 5, 3, 4, 2, 34, 2, 56, 98, 32, 54};
-
-        addArrays(array1,array2);
-
-
-
-
-
-
+          add2Arrs(new int[]{1,2,3},new int[]{4,5,6});
     }
-
-    public static void addArrays(int[] arr1, int[] arr2){
-
-        int[] newArray=new int[arr1.length+arr2.length];
-
+    static void add2Arrs(int[] arr1, int[] arr2){
         int count=0;
-
-        for (int a=0; a<arr1.length;a++){
-            newArray[a]=arr1[a];
+        int[] newArr=new int[arr1.length+arr2.length];
+        for (int i=0;i<arr1.length;i++){
+            newArr[i]=arr1[i];
             count++;
         }
-
-        for (int b=0;b<arr2.length;b++){
-            newArray[count]=arr2[b];
+        for (int i=0;i<arr2.length;i++){
+            newArr[count]=arr2[i];
             count++;
         }
-
-        System.out.println(Arrays.toString(newArray));
+        System.out.println(Arrays.toString(newArr));
     }
-
-
-
 }
+
+//********Output******
+//[1, 2, 3, 4, 5, 6]
