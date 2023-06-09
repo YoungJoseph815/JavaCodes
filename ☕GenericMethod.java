@@ -1,4 +1,4 @@
-public class GeneticMethod {
+public class GenericMethod {
   
   //Generic allows similar data types to be passed as parameters.
 
