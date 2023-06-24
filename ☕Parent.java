@@ -23,7 +23,6 @@ class Child extends Parent {
         System.out.println(super.str1);
         System.out.println(this.str1);
         System.out.println(super.str2);
-
     }
 
     public static void main(String[] args)
